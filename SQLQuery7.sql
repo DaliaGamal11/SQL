@@ -23,7 +23,7 @@ and t.Top_Id =c.Top_Id)
 GO
 
 --3
---Create a view that will display Instructor Name, Department Name for the ‘SD’ or ‘Java’ Department 
+--Create a view that will display Instructor Name, Department Name for the â€˜SDâ€™ or â€˜Javaâ€™ Department 
 create view ins_sj as 
 (select Ins_Name , Dept_Name
 from Instructor i, Department d
@@ -33,10 +33,10 @@ and Dept_Name in ('SD' , 'Java'))
 GO 
 
 --4 
---Create a view “V1” that displays student data for student who lives in Alex or Cairo. 
+--Create a view â€œV1â€ that displays student data for student who lives in Alex or Cairo. 
 --Note: Prevent the users to run the following query 
---Update V1 set st_address=’tanta’
---Where st_address=’alex’;
+--Update V1 set st_address=â€™tantaâ€™
+--Where st_address=â€™alexâ€™;
 
 create view V1 as 
 select *
@@ -50,7 +50,7 @@ Update V1 set st_address='tanta'
 Where st_address='alex';
 
 --5
---Create a view that will display the project name and the number of employees work on it. “Use Company DB”
+--Create a view that will display the project name and the number of employees work on it. â€œUse Company DBâ€
 create view pj_em as
 (Select Pname , count(Essn) " Employess Count "
 from Project p , Works_for w
@@ -80,28 +80,6 @@ FROM Sales.store_Archive;
 
 SELECT * FROM Sales.store_Archive;
 
-
-
-
-
-
-
-
---6
---Create index on column (Hiredate) that allow u to cluster the data in table Department. What will happen?
-
-
---7
---Create index that allow u to enter unique ages in student table. What will happen?
-
-
---8
---Using Merge statement between the following two tables [User ID, Transaction Amount]
-
-
---9
---Display Course Name , Student Full Name with Grade
---In each course with name of leading student and lag student in each course
 
 
 
