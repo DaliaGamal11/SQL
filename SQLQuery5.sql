@@ -1,6 +1,6 @@
 --1
 --Display the SalesOrderID, ShipDate of the SalesOrderHeader table (Sales schema) to show SalesOrders
---that occurred within the period ‘7/28/2002’ and ‘7/29/2014’
+--that occurred within the period â€˜7/28/2002â€™ and â€˜7/29/2014â€™
 Select SalesOrderID ,ShipDate
 from Sales.SalesOrderHeader
 where ShipDate between '7/28/2002' and '7/29/2014' ;
@@ -68,17 +68,12 @@ where ListPrice between 100 and 120
 order by listprice ;
 
 
---12 (Check)
---Using union statement, retrieve the today’s date in different styles using convert or format funtion.
+--12 
+--Using union statement, retrieve the todayâ€™s date in different styles using convert or format funtion.
 SELECT CONVERT(VARCHAR, GETDATE() ,1) 
 UNION
 SELECT CONVERT(VARCHAR, GETDATE(),2) 
 
 
 
-
---11
---Transfer the rowguid ,Name, SalesPersonID, Demographics from Sales.Store table  in a newly created table named [store_Archive]
---Note: Check your database to see the new table and how many rows in it?
---b)	Try the previous query but without transferring the data? 
 
