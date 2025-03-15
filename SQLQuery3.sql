@@ -1,4 +1,4 @@
---1 (check )
+--1 
 --Display (Using Union Function) 
  --The name and the gender of the dependence that's gender is Female and depending on Female Employee. 
  --And the male dependence that depends on Male Employee.
@@ -58,7 +58,7 @@ where Dnum =Dno
 Group by Dnum ,Dname
 Having AVG(salary ) < ( Select AVG (Salary) from Employee );
 
---7 (check)
+--7 
 --Retrieve a list of employees names and the projects names they are working on ordered 
 --by department number and within each department, ordered alphabetically by last name, first name.
 
@@ -80,7 +80,7 @@ select max(Salary)
 from Employee
 Where Salary<(select max(salary)from Employee)
 
---9 (check)
+--9 
 --Get the full name of employees that is similar to any dependent name
 select Fname +'  '+ Lname " FUll Name " 
 from Employee 
@@ -92,7 +92,7 @@ FROM Dependent ;
     
 
 
---10 (check)
+--10 
 --Display the employee number and name if at least one of them have dependents (use exists keyword).
 select SSN , Fname ,lname 
 from Employee
@@ -155,7 +155,7 @@ WHERE SSN = '223344';
 
 
 --14
---Try to update all salaries of employees who work in Project ‘Al Rabwah’ by 30%
+--Try to update all salaries of employees who work in Project â€˜Al Rabwahâ€™ by 30%
 update Employee
 set salary=salary*1.3
 where SSN IN (
